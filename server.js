@@ -33,8 +33,8 @@ app.get('/profile/:id', (req,res) => profile.handleProfileGet(req,res,db))
 app.put('/image', (req,res) => image.handleImagePut(req,res,db))
 app.post('/imageurl',(req,res) => image.handleImageApiCall(req,res))
 
-app.listen(4000, () => {
-    console.log("Server running on port 4000")
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Server running on port ${process.env.PORT}`)
 })
 /*
     Endpoints
